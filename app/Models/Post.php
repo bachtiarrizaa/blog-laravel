@@ -14,6 +14,7 @@ class Post extends Model
 
     // gaboleh diisi
     protected $guarded = ['id'];
+    protected $with = ['author', 'category'];
 
     public function category() {
         return $this -> belongsTo(Category::class);
